@@ -31,7 +31,7 @@ function Category() {
         //create a query
         const q = query(
           listingsRef,
-          where("type", "==", params.categoryName),
+          where("type", "==", params.CategoryName),
           orderBy("timestamp", "desc"),
           limit(10)
         );
@@ -56,7 +56,6 @@ function Category() {
         setLoading(false);
       } catch (error) {
         toast.error("could not fetch listings");
-        // console.log(error);
       }
     };
 

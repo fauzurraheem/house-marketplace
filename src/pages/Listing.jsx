@@ -43,22 +43,11 @@ function Listing() {
   if(loading){
     return <Spinner />
   }
-console.log(listing)
+
 
 
   return (
     <main>
-     
-     {/* <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
-          {listing  &&   
-          <SwiperSlide
-            >
-              <div  className='swiperSlideDiv' >
-                <img src={listing.imageUrls[0]} style={{width:'fit-content', height:'fit-content'}} alt=''/>
-              </div>
-            </SwiperSlide>
-            }
-        </Swiper> */}
     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
     {listing.imageUrls.map((lis, i) => (
         <SwiperSlide key={i}>

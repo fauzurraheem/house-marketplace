@@ -39,7 +39,8 @@ function Offers() {
             data: doc.data()
           })
         })
-        console.log(listings)
+
+        
         setListings(listings)
         setLoading(false)
       } catch (error) {
