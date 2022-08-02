@@ -57,17 +57,25 @@ function Slider() {
     listings && (
       <>
         <p className='exploreHeading'>Recommended</p>
-
-
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
         {listings.map((lis) => (
             <SwiperSlide key={lis.id}
             onClick={() => navigate(`/category/${lis.data.type}/${lis.id}`)}
             >
-              <div  className='swiperSlideDiv'>
-                <img src={lis.data.imageUrls[0]} style={{width:'100%', height:'20rem'}} alt=''/>
-                
-                
+               <div
+                style={{
+                  background: `url(${lis.data.imageUrls[0]}) center no-repeat`,
+                  backgroundSize: 'cover',
+                  height:'50vh',
+        
+                }}
+                className='swiperSlideDiv'
+              >
+                <p className='swiperSlideText'>{lis.data.name}</p>
+                <p className='swiperSlidePrice'>
+                  ${lis.data.discountedPrice ?? lis.data.regularPrice}{' '}
+                  {lis.data.type === 'rent' && '/ month'}
+                </p>
               </div>
             </SwiperSlide>
           ))}

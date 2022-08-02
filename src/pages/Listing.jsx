@@ -33,12 +33,13 @@ function Listing() {
         
         setListing(docSnap.data())
         setLoading(false)
-        
+       
       }
     }
 
     fetchListing()
   }, [navigate, params.listingId])
+
 
   if(loading){
     return <Spinner />
@@ -48,12 +49,23 @@ function Listing() {
 
   return (
     <main>
+    <div>
+        <title>{listing.name}</title>
+    </div>
     <Swiper pagination={true} modules={[Pagination]} className="mySwiper">
     {listing.imageUrls.map((lis, i) => (
         <SwiperSlide key={i}>
-          <div  className='swiperSlideDiv'>
-            <img src={lis} style={{width:'100%', height:'12rem'}} alt=''/>
-          </div>
+          <div
+              style={{
+                background: `url(${lis}) center no-repeat`,
+                backgroundSize: 'cover',
+                width: '100%',
+                height: '50vh'
+              }}
+              className='swiperSlideDiv'
+            >
+              
+            </div>
         </SwiperSlide>
       ))}
     </Swiper>
