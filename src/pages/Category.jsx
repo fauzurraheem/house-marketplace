@@ -31,7 +31,7 @@ function Category() {
         //create a query
         const q = query(
           listingsRef,
-          where("type", "==", params.CategoryName),
+          where("type", "==", params.categoryName),
           orderBy("timestamp", "desc"),
           limit(10)
         );
@@ -61,7 +61,7 @@ function Category() {
     };
 
     fetchListings();
-  }, [params.CategoryName]);
+  }, [params.categoryName]);
 
   
   //pagination /load more

@@ -38,7 +38,7 @@ function ListingItem({listing, id, onDelete, onEdit}) {
       {onDelete && (<DeleteIcon className='removeIcon' fill='rgb(231,76,60)' onClick={() => onDelete(listing.id, listing.name)} />)}
 
       {onEdit && (
-        <EditIcon  onClick={onEdit(id)}  className='editIcon'  />
+        <EditIcon  onClick={() => onEdit(id)}  className='editIcon'  />
       )} 
 
     </li>

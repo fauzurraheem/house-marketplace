@@ -108,7 +108,7 @@ function Listing() {
 
 
         {auth.currentUser?.uid !== listing.userRef &&(
-          <Link to={`/contact/${listing.useRef}?listingName=${listing.name}` } className='primaryButton'>
+          <Link to={`/contact/${listing.userRef}?listingName=${listing.name}` } className='primaryButton'>
             Contact LandLord
           </Link>
         )}

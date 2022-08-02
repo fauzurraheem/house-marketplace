@@ -16,7 +16,7 @@ function Contact() {
 
   useEffect(() => {
     const getLandlord = async() => {
-      const docRef = doc(db, 'users', params.lanlordId)
+      const docRef = doc(db, 'users', params.landlordId)
       const docSnap = await getDoc(docRef)
 
       if (docSnap.exists()){
@@ -57,7 +57,7 @@ function Contact() {
             </div>
 
             <a href={`mailto:${landlord.email}?Subject=${searchParams.get('listingName')}&body=${message}`}>
-              <button className="primaryButton" type='buttton'>Send Message</button>
+              <button className="primaryButton" style={{marginBottom:"9rem"}} type='buttton'>Send Message</button>
             </a>
           </form>
         </main>
