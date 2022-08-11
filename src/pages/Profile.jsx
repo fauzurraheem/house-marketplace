@@ -117,7 +117,7 @@ const onEdit = (listingId) => {
         <p className="profileDetailsText">Personal Details</p>
         <p className="changePersonalDetails" onClick={(e) => {changeDetails && onSubmit()
         setChangeDetails((prevState) => !prevState)}}>
-        {changeDetails ? 'done' : 'changeD'}
+        {changeDetails ? 'done' : 'changeDetails'}
         </p>
       </div>
 

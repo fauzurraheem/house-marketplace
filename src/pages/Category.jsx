@@ -123,7 +123,7 @@ function Category() {
       ) : listings && listings.length > 0 ? (
         <>
           <main>
-            <ul className="categoryListings">
+            <ul className="categoryListings" style={{marginBottom:'20rem' }}>
               {listings.map((listing) => (
                 <ListingItem
                   listing={listing.data}
